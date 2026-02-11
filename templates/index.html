@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Начало - Cybersecurity Magazine{% endblock %}
+
+{% block extra_css %}
+<style>
+    body {
+        background: url("{% static 'images/cyber-security-3374252_1920.jpg' %}") no-repeat center center fixed;
+        background-size: 100% 75%;
+        margin: 0;
+        padding: 0;
+    }
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+        min-height: 100vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    h1 {
+        font-size: 4rem;
+        text-shadow: 2px 2px 4px #000;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="overlay">
+    <div>
+        <h1>CyberSecurity MAGAZINE</h1>
+        <p class="lead">Вашето доверено издание за киберсигурност</p>
+    </div>
+</div>
+{% endblock %}
