@@ -12,7 +12,7 @@ class ProductListView(ListView):
 
     def get_queryset(self):
         qs = Product.objects.filter(available=True)
-        # сортиране по цена, ако има параметър
+
         sort = self.request.GET.get('sort')
         if sort == 'price_asc':
             qs = qs.order_by('price')

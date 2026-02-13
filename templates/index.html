@@ -2,16 +2,17 @@
 {% load static %}
 {% load magazine_extras %}
 
-{% block title %}Начало - Cybersecurity Magazine{% endblock %}
+{% block title %}Cybersecurity Magazine{% endblock %}
 
 {% block extra_css %}
+<!--suppress ALL -->
 <style>
     body {
-        background: url("{% static 'images/cyber-security-3374252_1920.jpg' %}") no-repeat center center fixed;
-        background-size: cover;
+        background: url("{% static 'images/3043140.jpg' %}") no-repeat top;
+        background-size: 100% auto;
     }
     .hero-overlay {
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.0);
         min-height: 60vh;
         display: flex;
         align-items: center;
@@ -19,6 +20,7 @@
         text-align: center;
         color: white;
         margin-bottom: 2rem;
+
     }
 </style>
 {% endblock %}
@@ -26,14 +28,14 @@
 {% block content %}
 <div class="hero-overlay">
     <div>
-        <h1 class="display-1">CyberSecurity MAGAZINE</h1>
-        <p class="lead">Вашият доверен източник за киберсигурност</p>
+        <h1 class="display-1">CyberSecurity Magazine</h1>
+        <p class="lead">Всичко най-важно от света на киберсигурността на едно място</p>
     </div>
 </div>
 
 <div class="container">
-    <!-- Препоръчани статии -->
-    <section class="mb-5">
+
+    <section class="mb-5" style="color: white;">
         <h2 class="mb-4">Препоръчани статии</h2>
         <div class="row">
             {% for article in featured_articles %}
@@ -52,8 +54,8 @@
         </div>
     </section>
 
-    <!-- Последни продукти -->
-    <section class="mb-5">
+    <section class="mb-5" style="color: white;">
+
         <h2 class="mb-4">Последни продукти</h2>
         <div class="row">
             {% for product in latest_products %}
