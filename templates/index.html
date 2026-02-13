@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load magazine_extras %}
 
 {% block title %}Начало - Cybersecurity Magazine{% endblock %}
 
@@ -7,31 +8,68 @@
 <style>
     body {
         background: url("{% static 'images/cyber-security-3374252_1920.jpg' %}") no-repeat center center fixed;
-        background-size: 100% 75%;
-        margin: 0;
-        padding: 0;
+        background-size: cover;
     }
-    .overlay {
-        background-color: rgba(0, 0, 0, 0.6);
-        min-height: 100vh;
-        color: white;
+    .hero-overlay {
+        background-color: rgba(0, 0, 0, 0.7);
+        min-height: 60vh;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-    }
-    h1 {
-        font-size: 4rem;
-        text-shadow: 2px 2px 4px #000;
+        color: white;
+        margin-bottom: 2rem;
     }
 </style>
 {% endblock %}
 
 {% block content %}
-<div class="overlay">
+<div class="hero-overlay">
     <div>
-        <h1>CyberSecurity MAGAZINE</h1>
-        <p class="lead">Вашето доверено издание за киберсигурност</p>
+        <h1 class="display-1">CyberSecurity MAGAZINE</h1>
+        <p class="lead">Вашият доверен източник за киберсигурност</p>
     </div>
+</div>
+
+<div class="container">
+    <!-- Препоръчани статии -->
+    <section class="mb-5">
+        <h2 class="mb-4">Препоръчани статии</h2>
+        <div class="row">
+            {% for article in featured_articles %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ article.title }}</h5>
+                            <p class="card-text">{{ article.summary|truncatewords:20 }}</p>
+                            <a href="{{ article.get_absolute_url }}" class="btn btn-sm btn-outline-primary">Прочети</a>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <p>Все още няма препоръчани статии.</p>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Последни продукти -->
+    <section class="mb-5">
+        <h2 class="mb-4">Последни продукти</h2>
+        <div class="row">
+            {% for product in latest_products %}
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-title">{{ product.name }}</h6>
+                            <p class="card-text">${{ product.price }}</p>
+                            <a href="{{ product.get_absolute_url }}" class="btn btn-sm btn-outline-success">Детайли</a>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <p>Няма налични продукти.</p>
+            {% endfor %}
+        </div>
+    </section>
 </div>
 {% endblock %}

@@ -36,7 +36,7 @@ class ArticleForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # Readonly поле: ако вече е публикувана, статусът не може да се променя на чернова
+
         if self.instance.pk and self.instance.status == 'published':
             self.fields['status'].disabled = True
             self.fields['status'].help_text = 'Cannot change status of a published article.'

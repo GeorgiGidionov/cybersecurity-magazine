@@ -1,0 +1,8 @@
+<ul class="list-unstyled">
+    {% for article in latest_articles %}
+    <li class="mb-2">
+        <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+        <small class="text-muted d-block">{{ article.published_at|date:"d.m.Y" }}</small>
+    </li>
+    {% endfor %}
+</ul>
