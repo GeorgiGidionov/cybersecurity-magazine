@@ -81,8 +81,7 @@ Run the development server
 
 python manage.py runserver
 
-Visit http://127.0.0.1:8000/ in your browser.
-🧪 Usage Guide
+Visit http://127.0.0.1:8000/
 Home Page
 
   Displays featured articles and latest products.
