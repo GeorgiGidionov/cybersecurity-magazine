@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Изтриване на статия - Cybersecurity Magazine{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="alert alert-danger">
+        <h4 class="alert-heading">Внимание!</h4>
+        <p>Сигурни ли сте, че искате да изтриете статията <strong>"{{ object.title }}"</strong>?</p>
+        <p>Това действие е необратимо.</p>
+        <hr>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Да, изтрий</button>
+            <a href="{% url 'article_detail' object.slug %}" class="btn btn-secondary">Отказ</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

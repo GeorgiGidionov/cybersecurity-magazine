@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{% if form.instance.pk %}Редактиране{% else %}Нова статия{% endif %} - Cybersecurity Magazine{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>{% if form.instance.pk %}Редактиране на статия{% else %}Създаване на нова статия{% endif %}</h1>
+
+    <form method="post" novalidate>
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="mb-3">
+                <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                {% if field.field.disabled %}
+                    <p class="form-control-plaintext">{{ field.value }}</p>
+                    <input type="hidden" name="{{ field.name }}" value="{{ field.value }}">
+                {% else %}
+                    {{ field }}
+                {% endif %}
+                {% if field.help_text %}
+                    <div class="form-text">{{ field.help_text }}</div>
+                {% endif %}
+                {% if field.errors %}
+                    <div class="alert alert-danger mt-1">
+                        {{ field.errors }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-primary">Запази</button>
+        <a href="{% url 'article_list' %}" class="btn btn-secondary">Отказ</a>
+    </form>
+</div>
+{% endblock %}
