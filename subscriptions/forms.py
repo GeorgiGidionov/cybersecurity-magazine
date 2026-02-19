@@ -10,17 +10,17 @@ class SubscriptionForm(forms.ModelForm):
             'start_date': forms.DateInput(attrs={'type': 'date'}),
         }
         labels = {
-            'plan': 'Subscription Plan',
-            'subscriber_name': 'Full Name',
-            'subscriber_email': 'Email Address',
-            'start_date': 'Start Date',
+            'plan': 'План',
+            'subscriber_name': 'Име и фамилия',
+            'subscriber_email': 'Имейл',
+            'start_date': 'Начална дата',
         }
         help_texts = {
-            'start_date': 'Select the date you want the subscription to begin.',
+            'start_date': 'Моля, изберете дата в бъдещето.',
         }
 
     def clean_start_date(self):
         start = self.cleaned_data.get('start_date')
         if start < date.today():
-            raise forms.ValidationError('Start date cannot be in the past.')
+            raise forms.ValidationError('Началната дата не може да бъде в миналото.')
         return start

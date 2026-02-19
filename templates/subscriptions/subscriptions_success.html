@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Успешен абонамент{% endblock %}
+
+{% block content %}
+<div class="container mt-4 text-center">
+    <h1>Благодарим Ви!</h1>
+    <p>Вашият абонамент беше успешно активиран.</p>
+    <a href="{% url 'plan_list' %}" class="btn btn-primary">Към абонаментните планове</a>
+</div>
+{% endblock %}

@@ -9,11 +9,11 @@
     <div class="row">
         {% for plan in plans %}
             <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <div class="card-body text-center">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
                         <h3>{{ plan.name }}</h3>
                         <h2 class="text-primary">${{ plan.price }}</h2>
-                        <p>{{ plan.description|truncatewords:20 }}</p>
+                        <p>{{ plan.description }}</p>
                         <p>Период: {{ plan.duration_days }} дни</p>
                         <a href="{% url 'subscription_create' %}?plan={{ plan.id }}" class="btn btn-primary">Абонирай се</a>
                     </div>
