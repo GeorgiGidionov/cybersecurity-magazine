@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block title %}Страницата не е намерена{% endblock %}
+
 {% block content %}
 <div class="container text-center py-5">
-    <h1 class="display-1">404</h1>
-    <h2>Страницата не е намерена</h2>
-    <p class="lead">Съжаляваме, но такава страница не съществува.</p>
-    <a href="{% url 'home' %}" class="btn btn-primary">Към началната страница</a>
+    <h1 class="display-1 text-danger">404</h1>
+    <h2 class="mb-4">Страницата не е намерена</h2>
+    <p class="lead mb-4">Извинете, но страницата, която търсите, не съществува или е преместена.</p>
+    <a href="{% url 'home' %}" class="btn btn-primary btn-lg">Към началната страница</a>
 </div>
 {% endblock %}
