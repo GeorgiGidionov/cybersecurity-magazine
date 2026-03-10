@@ -51,4 +51,4 @@ class OrderCreateView(CreateView):
     success_url = reverse_lazy('order_success')
 
 def order_success(request):
-    return render(request, 'store/order_success.html')
+    return render(request, 'store/order_form.html')

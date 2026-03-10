@@ -7,7 +7,7 @@
 <div class="container mt-4">
     <h1>Всички статии</h1>
 
-    <!-- Форма за търсене (вкарана в content) -->
+    <!-- Форма за търсене (правилна) -->
     <form method="get" action="." class="mb-4">
         <div class="input-group">
             <input type="text" name="q" class="form-control"
@@ -20,44 +20,42 @@
     <div class="row">
         {% for article in articles %}
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">{{ article.title }}</h5>
                         <p class="card-text">{{ article.summary|truncatewords:20 }}</p>
-                        <a href="{{ article.get_absolute_url }}" class="btn btn-primary">Прочети</a>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <a href="{{ article.get_absolute_url }}" class="btn btn-primary btn-sm">Прочети</a>
+                            <div>
+                                <a href="{% url 'article_edit' article.slug %}" class="btn btn-warning btn-sm">Редактирай</a>
+                                <a href="{% url 'article_delete' article.slug %}" class="btn btn-danger btn-sm">Изтрий</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         {% empty %}
-            <p>Все още няма статии.</p>
+            <p class="text-center">Все още няма статии.</p>
         {% endfor %}
     </div>
 
-    <!-- Пагинация (запазва търсенето) -->
+    <!-- Пагинация -->
     {% if is_paginated %}
         <nav aria-label="Page navigation" class="mt-4">
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
                     <li class="page-item">
-                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q|urlencode }}{% endif %}">
-                            ‹
-                        </a>
+                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q|urlencode }}{% endif %}">‹</a>
                     </li>
                 {% endif %}
-
                 {% for num in page_obj.paginator.page_range %}
                     <li class="page-item {% if page_obj.number == num %}active{% endif %}">
-                        <a class="page-link" href="?page={{ num }}{% if request.GET.q %}&q={{ request.GET.q|urlencode }}{% endif %}">
-                            {{ num }}
-                        </a>
+                        <a class="page-link" href="?page={{ num }}{% if request.GET.q %}&q={{ request.GET.q|urlencode }}{% endif %}">{{ num }}</a>
                     </li>
                 {% endfor %}
-
                 {% if page_obj.has_next %}
                     <li class="page-item">
-                        <a class="page-link" href="?page={{ page_obj.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q|urlencode }}{% endif %}">
-                            ›
-                        </a>
+                        <a class="page-link" href="?page={{ page_obj.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q|urlencode }}{% endif %}">›</a>
                     </li>
                 {% endif %}
             </ul>
