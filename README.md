@@ -1,10 +1,71 @@
+Cybersecurity Magazine is a full-featured Django web application built 
+as an educational project. It simulates an online magazine focused on 
+cybersecurity, offering articles, a product store, and subscription plans – 
+all without user authentication (as per project requirements).
+
+Three Django apps with clear responsibilities:
+
+        articles – manage magazine articles, authors, categories and tags.
+
+        store – handle cybersecurity products and customer orders.
+
+        subscriptions – manage subscription plans and signups.
+
+    Database models with relationships:
+
+        Article → Category (many‑to‑one)
+
+        Article → Author (many‑to‑one)
+
+        Article ↔ Tag (many‑to‑many)
+
+        Order → Product (many‑to‑one)
+
+    Full CRUD for Article and Product models.
+
+    10+ dynamic templates built with Django Template Language and Bootstrap 5:
+
+        Home page with featured articles and latest products.
+
+        Article list (filterable by search, sortable by date), detail, create, edit, delete.
+
+        Product list (sortable by price/newest), detail, create, edit, delete, order form.
+
+        Subscription plans list and signup form.
+
+        About, Contact, and custom 404 error page.
+
+    Forms with validations:
+
+        Article, Product, Order, Subscription forms.
+
+        Read‑only/disabled fields (e.g., published article status).
+
+        User‑friendly error messages, help texts, placeholders.
+
+        Confirmation step before deletion (Django’s DeleteView).
+
+    Custom template tags/filters:
+
+        markdown_to_html – render Markdown content.
+
+        truncate_chars – truncate text by character count.
+
+        latest_articles – inclusion tag to display recent articles.
+
+    PostgreSQL database backend.
+
+    Fully responsive design using Bootstrap 5.
+
+    No authentication – all features are publicly accessible, meeting the assignment criteria.
+
 Technologies Used
 
     Backend: Django 6.0.2, Python 3.13
 
     Database: PostgreSQL 16
 
-    Frontend: HTML5, CSS3, Bootstrap 5, 
+    Frontend: HTML5, CSS3, Bootstrap 5, JavaScript (minimal)
 
     Version Control: Git, GitHub
 
@@ -14,8 +75,7 @@ Technologies Used
 
         psycopg2-binary – PostgreSQL adapter
 
-        python-dotenv – environment variables management
-
+        python-dotenv – environment variables management (optional)
 Project Structure
 text
 
