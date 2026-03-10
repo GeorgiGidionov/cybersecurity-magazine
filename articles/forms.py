@@ -5,7 +5,7 @@ class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
         fields = ['title', 'slug', 'content', 'summary', 'category', 'author', 'status', 'featured']
-        exclude = ['created_at', 'updated_at', 'views', 'published_at']  # изключени полета
+        exclude = ['created_at', 'updated_at', 'views', 'published_at']
         widgets = {
             'content': forms.Textarea(attrs={'rows': 10, 'placeholder': 'Write your article content here...'}),
             'summary': forms.Textarea(attrs={'rows': 3, 'placeholder': 'Brief summary (max 500 chars)'}),
@@ -36,7 +36,6 @@ class ArticleForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-
         if self.instance.pk and self.instance.status == 'published':
             self.fields['status'].disabled = True
             self.fields['status'].help_text = 'Cannot change status of a published article.'
