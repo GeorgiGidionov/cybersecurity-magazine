@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Успешна поръчка{% endblock %}
+
+{% block content %}
+<div class="container mt-4 text-center">
+    <h1>Благодарим Ви!</h1>
+    <p>Вашата поръчка беше успешно приета.</p>
+    <a href="{% url 'product_list' %}" class="btn btn-primary">Към продуктите</a>
+</div>
+{% endblock %}

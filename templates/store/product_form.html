@@ -7,7 +7,7 @@
 <div class="container mt-4">
     <h1>{% if form.instance.pk %}Редактиране на продукт{% else %}Създаване на нов продукт{% endif %}</h1>
 
-    <form method="post" novalidate>
+    <form method="post" enctype="multipart/form-data" novalidate>
         {% csrf_token %}
 
         {% for field in form %}

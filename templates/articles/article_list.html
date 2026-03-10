@@ -10,7 +10,7 @@
         <a href="{% url 'article_create' %}" class="btn btn-success">➕ Нова статия</a>
     </div>
 
-    <!-- Форма за търсене -->
+
     <form method="get" action="." class="mb-4">
         <div class="input-group">
             <input type="text" name="q" class="form-control" placeholder="Търси статии..." value="{{ request.GET.q }}">
@@ -18,7 +18,7 @@
         </div>
     </form>
 
-    <!-- Списък със статии -->
+
     <div class="row">
         {% for article in articles %}
             <div class="col-md-4 mb-4">
@@ -44,7 +44,6 @@
         {% endfor %}
     </div>
 
-    <!-- Пагинация -->
     {% if is_paginated %}
         <nav aria-label="Page navigation" class="mt-4">
             <ul class="pagination justify-content-center">

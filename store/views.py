@@ -12,14 +12,13 @@ class ProductListView(ListView):
 
     def get_queryset(self):
         qs = Product.objects.filter(available=True)
-
         sort = self.request.GET.get('sort')
         if sort == 'price_asc':
             qs = qs.order_by('price')
         elif sort == 'price_desc':
             qs = qs.order_by('-price')
         else:
-            qs = qs.order_by('-created_at')
+            qs = qs.order_by('-created_at')  # най-новите първи
         return qs
 
 class ProductDetailView(DetailView):
@@ -51,4 +50,4 @@ class OrderCreateView(CreateView):
     success_url = reverse_lazy('order_success')
 
 def order_success(request):
-    return render(request, 'store/order_form.html')
+    return render(request, 'store/order_success.html')
