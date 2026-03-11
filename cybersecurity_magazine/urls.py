@@ -3,7 +3,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
+from django.conf.urls import handler404
+from . import views
 
+
+handler404 = 'cybersecurity_magazine.views.custom_404'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),

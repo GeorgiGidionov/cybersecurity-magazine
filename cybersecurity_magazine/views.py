@@ -1,6 +1,8 @@
 from django.shortcuts import render
+
 from articles.models import Article
 from store.models import Product
+
 
 def home(request):
     featured_articles = Article.objects.filter(featured=True, status='published')[:3]
