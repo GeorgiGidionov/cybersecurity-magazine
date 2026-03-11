@@ -5,7 +5,7 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
-        exclude = ['created_at', 'updated_at']  # изключени полета
+        exclude = ['created_at', 'updated_at']
         widgets = {
             'description': forms.Textarea(attrs={'rows': 5, 'placeholder': 'Detailed product description...'}),
             'price': forms.NumberInput(attrs={'step': '0.01'}),

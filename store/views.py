@@ -18,7 +18,7 @@ class ProductListView(ListView):
         elif sort == 'price_desc':
             qs = qs.order_by('-price')
         else:
-            qs = qs.order_by('-created_at')  # най-новите първи
+            qs = qs.order_by('-created_at')
         return qs
 
 class ProductDetailView(DetailView):

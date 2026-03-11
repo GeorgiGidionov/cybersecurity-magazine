@@ -10,14 +10,12 @@
         <a href="{% url 'product_create' %}" class="btn btn-success">➕ Нов продукт</a>
     </div>
 
-    <!-- Сортиране -->
     <div class="mb-3">
         <a href="?sort=price_asc" class="btn btn-outline-secondary btn-sm">Цена: ниска → висока</a>
         <a href="?sort=price_desc" class="btn btn-outline-secondary btn-sm">Цена: висока → ниска</a>
         <a href="?sort=newest" class="btn btn-outline-secondary btn-sm">Най-нови</a>
     </div>
 
-    <!-- Списък с продукти -->
     <div class="row">
         {% for product in products %}
             <div class="col-md-4 mb-4">
@@ -43,7 +41,6 @@
         {% endfor %}
     </div>
 
-    <!-- Пагинация -->
     {% if is_paginated %}
         <nav aria-label="Page navigation" class="mt-4">
             <ul class="pagination justify-content-center">
