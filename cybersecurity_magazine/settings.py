@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 
 import os
+from django.test import TestCase, override_settings
+from articles.tasks import send_comment_notification
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -44,8 +46,23 @@ INSTALLED_APPS = [
     'articles',
     'store',
     'subscriptions',
+    'accounts',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'api',
+    'celery'
 ]
-
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',  # за уеб интерфейса
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',  # анонимен -> само четене
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+}
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -134,3 +151,15 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",          # или os.path.join(BASE_DIR, 'static')
 ]
 STATIC_ROOT = BASE_DIR / "staticfiles"   # за production
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # за тест – извежда в конзолата
+# за production настройте истински SMTP
+DEFAULT_FROM_EMAIL = 'noreply@cybersecuritymagazine.com'
+ADMIN_EMAIL = 'admin@example.com'
+
+
+LOGIN_URL = 'login'

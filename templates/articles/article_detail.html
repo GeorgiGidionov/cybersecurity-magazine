@@ -53,5 +53,31 @@
             </div>
         </div>
     </div>
+
+    <!-- Секция с коментари -->
+    <div class="comments-section mt-5">
+        <h3>Коментари ({{ article.comments.count }})</h3>
+
+        {% for comment in article.comments.all %}
+            {% if comment.is_approved %}
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <strong>{{ comment.author_name }}</strong>
+                        <small class="text-muted">{{ comment.created_at|date:"d M Y H:i" }}</small>
+                        <p class="mt-2">{{ comment.content }}</p>
+                    </div>
+                </div>
+            {% endif %}
+        {% empty %}
+            <p>Все още няма коментари. Бъдете първият!</p>
+        {% endfor %}
+
+        <h4 class="mt-4">Добави коментар</h4>
+        <form method="post" action="{% url 'add_comment' article.slug %}">
+            {% csrf_token %}
+            {{ comment_form.as_p }}
+            <button type="submit" class="btn btn-primary">Публикувай</button>
+        </form>
+    </div>
 </div>
 {% endblock %}

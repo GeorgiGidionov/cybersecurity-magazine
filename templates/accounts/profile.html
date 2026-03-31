@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Профил на {{ user.username }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Профил на {{ user.username }}</h1>
+    <p><strong>Имейл:</strong> {{ user.email }}</p>
+    <p><strong>Дата на регистрация:</strong> {{ user.date_joined|date:"d.m.Y" }}</p>
+    {% if user.profile %}
+        <p><strong>Биография:</strong> {{ user.profile.bio|default:"Не е въведена" }}</p>
+        <p><strong>Местоположение:</strong> {{ user.profile.location|default:"Не е посочено" }}</p>
+        <p><strong>Дата на раждане:</strong> {{ user.profile.birth_date|date:"d.m.Y"|default:"Не е посочена" }}</p>
+        {% if user.profile.avatar %}
+            <img src="{{ user.profile.avatar.url }}" alt="Avatar" style="max-width: 150px;">
+        {% endif %}
+    {% else %}
+        <p>Профилът не е попълнен.</p>
+    {% endif %}
+    <a href="{% url 'profile_edit' %}" class="btn btn-primary">Редактирай профила</a>
+</div>
+{% endblock %}

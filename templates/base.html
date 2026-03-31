@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 {% load static %}
-<!--suppress HtmlUnknownTarget -->
 <html lang="bg">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,6 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <!-- Текстово лого (без изображение) -->
             <a class="navbar-brand" href="{% url 'home' %}">
                 <span class="d-none d-md-inline">Cybersecurity Magazine</span>
                 <span class="d-md-none">CS Mag</span>
@@ -28,7 +27,7 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'product_list' %}">Магазин</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'plan_list' %}">Абонаменти</a></li>
 
-                    <!-- ✅ Dropdown "Създай" -->
+                    <!-- Dropdown "Създай" -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Създай
@@ -41,6 +40,20 @@
 
                     <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">За нас</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Контакти</a></li>
+
+                    <!-- Потребителски линкове (вход/регистрация или профил/изход) -->
+                    {% if user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">Профил</a></li>
+                        <li class="nav-item">
+                            <form method="post" action="{% url 'logout' %}">
+                                {% csrf_token %}
+                                <button type="submit" class="nav-link btn btn-link">Изход</button>
+                            </form>
+                        </li>
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Вход</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Регистрация</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

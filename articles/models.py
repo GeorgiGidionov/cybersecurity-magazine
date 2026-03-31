@@ -59,3 +59,15 @@ class ArticleTag(models.Model):
 
     class Meta:
         unique_together = ('article', 'tag')
+
+class Comment(models.Model):
+    article = models.ForeignKey('Article', on_delete=models.CASCADE, related_name='comments')
+    author_name = models.CharField(max_length=100)
+    author_email = models.EmailField(blank=True, null=True)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    is_approved = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Comment by {self.author_name} on {self.article.title}"
+

@@ -1,0 +1,1644 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-03-10T09:30:15.916Z",
+    "user": 3,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Иван Петров",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-03-10T09:30:34.696Z",
+    "user": 3,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Румен Радев",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Email\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-03-10T09:31:35.882Z",
+    "user": 3,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "admin",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-03-10T09:31:46.894Z",
+    "user": 3,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "Georgi",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-03-11T07:02:21.357Z",
+    "user": 3,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Георги Гидионов",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-03-16T14:17:25.979Z",
+    "user": 3,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "Ivan",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-03-24T13:17:32.160Z",
+    "user": 3,
+    "content_type": 19,
+    "object_id": "3",
+    "object_repr": "acd890c55709dd08b21d24d345ee288bbbd39c8d",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-03-24T13:18:26.247Z",
+    "user": 3,
+    "content_type": 17,
+    "object_id": "3",
+    "object_repr": "ivanpetrov's profile",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-03-24T13:47:33.616Z",
+    "user": 3,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "Comment by Георги on Нов закона за киберсигурност-Изменение и допълнение",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is approved\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-03-24T13:48:42.420Z",
+    "user": 3,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "Comment by Анонимен on Нов закона за киберсигурност-Изменение и допълнение",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is approved\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-03-24T13:50:53.798Z",
+    "user": 3,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "Comment by Иван Петров on Tech Над 30 приставки за Chrome, маскирани като ИИ функционалност, крадат вашите данни",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is approved\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-03-30T07:10:49.291Z",
+    "user": 3,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "Comment by Валентин on Осъден оператор на ботнет, свързан с TA551. Напомняне, че ransomware атаките започват от достъпа",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is approved\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-03-30T08:40:56.615Z",
+    "user": 3,
+    "content_type": 20,
+    "object_id": "5",
+    "object_repr": "Comment by Тошко on Нов закона за киберсигурност-Изменение и допълнение",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is approved\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 3,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 3,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 3,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 3,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 2,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 2,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 2,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 2,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add article tag",
+    "content_type": 8,
+    "codename": "add_articletag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change article tag",
+    "content_type": 8,
+    "codename": "change_articletag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete article tag",
+    "content_type": 8,
+    "codename": "delete_articletag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view article tag",
+    "content_type": 8,
+    "codename": "view_articletag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add tag",
+    "content_type": 11,
+    "codename": "add_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change tag",
+    "content_type": 11,
+    "codename": "change_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete tag",
+    "content_type": 11,
+    "codename": "delete_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view tag",
+    "content_type": 11,
+    "codename": "view_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add category",
+    "content_type": 10,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change category",
+    "content_type": 10,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete category",
+    "content_type": 10,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view category",
+    "content_type": 10,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add article",
+    "content_type": 7,
+    "codename": "add_article"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change article",
+    "content_type": 7,
+    "codename": "change_article"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete article",
+    "content_type": 7,
+    "codename": "delete_article"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view article",
+    "content_type": 7,
+    "codename": "view_article"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add author",
+    "content_type": 9,
+    "codename": "add_author"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change author",
+    "content_type": 9,
+    "codename": "change_author"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete author",
+    "content_type": 9,
+    "codename": "delete_author"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view author",
+    "content_type": 9,
+    "codename": "view_author"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add product category",
+    "content_type": 14,
+    "codename": "add_productcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change product category",
+    "content_type": 14,
+    "codename": "change_productcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete product category",
+    "content_type": 14,
+    "codename": "delete_productcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view product category",
+    "content_type": 14,
+    "codename": "view_productcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add product",
+    "content_type": 13,
+    "codename": "add_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change product",
+    "content_type": 13,
+    "codename": "change_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete product",
+    "content_type": 13,
+    "codename": "delete_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view product",
+    "content_type": 13,
+    "codename": "view_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add order",
+    "content_type": 12,
+    "codename": "add_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change order",
+    "content_type": 12,
+    "codename": "change_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete order",
+    "content_type": 12,
+    "codename": "delete_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view order",
+    "content_type": 12,
+    "codename": "view_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add subscription plan",
+    "content_type": 16,
+    "codename": "add_subscriptionplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change subscription plan",
+    "content_type": 16,
+    "codename": "change_subscriptionplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete subscription plan",
+    "content_type": 16,
+    "codename": "delete_subscriptionplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view subscription plan",
+    "content_type": 16,
+    "codename": "view_subscriptionplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add subscription",
+    "content_type": 15,
+    "codename": "add_subscription"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change subscription",
+    "content_type": 15,
+    "codename": "change_subscription"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete subscription",
+    "content_type": 15,
+    "codename": "delete_subscription"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view subscription",
+    "content_type": 15,
+    "codename": "view_subscription"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add profile",
+    "content_type": 17,
+    "codename": "add_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change profile",
+    "content_type": 17,
+    "codename": "change_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete profile",
+    "content_type": 17,
+    "codename": "delete_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view profile",
+    "content_type": 17,
+    "codename": "view_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add Token",
+    "content_type": 18,
+    "codename": "add_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change Token",
+    "content_type": 18,
+    "codename": "change_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete Token",
+    "content_type": 18,
+    "codename": "delete_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view Token",
+    "content_type": 18,
+    "codename": "view_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add Token",
+    "content_type": 19,
+    "codename": "add_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change Token",
+    "content_type": 19,
+    "codename": "change_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete Token",
+    "content_type": 19,
+    "codename": "delete_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view Token",
+    "content_type": 19,
+    "codename": "view_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add comment",
+    "content_type": 20,
+    "codename": "add_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change comment",
+    "content_type": 20,
+    "codename": "change_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete comment",
+    "content_type": 20,
+    "codename": "delete_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view comment",
+    "content_type": 20,
+    "codename": "view_comment"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Georgi",
+    "permissions": [
+      1,
+      2,
+      3,
+      4,
+      37,
+      38,
+      39,
+      40,
+      25,
+      26,
+      27,
+      28,
+      41,
+      42,
+      43,
+      44,
+      33,
+      34,
+      35,
+      36,
+      29,
+      30,
+      31,
+      32,
+      9,
+      10,
+      11,
+      12,
+      5,
+      6,
+      7,
+      8,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      53,
+      54,
+      55,
+      56,
+      49,
+      50,
+      51,
+      52,
+      45,
+      46,
+      47,
+      48,
+      61,
+      62,
+      63,
+      64,
+      57,
+      58,
+      59,
+      60
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$AqrpLF8zMbrRSsMtS0JyRX$iMGI3E9HI6ij9qStiGyC7lsXVikdH29AB5MxJo7XOJQ=",
+    "last_login": "2026-03-30T07:10:29.170Z",
+    "is_superuser": true,
+    "username": "gidionov",
+    "first_name": "",
+    "last_name": "",
+    "email": "gidionov@abv.bg",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-10T09:25:25.349Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$xyVyO5uNcy2s69az8zYgpN$IGU1uTjHWrjllFLPrvZ7oPwxmmwtCHCt696NzuNxWGs=",
+    "last_login": "2026-03-16T14:16:43.396Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@abv.bg",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-10T09:32:27.288Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$7A00wdZxceL6X4mM7acCwX$bniTzlUVMm854Qi58D86ABizdBymGMmFW3L7QhOZCv0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ivanpetrov",
+    "first_name": "",
+    "last_name": "",
+    "email": "ivanpetrov@abv.bg",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-16T14:27:19.159Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "articles",
+    "model": "article"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "articles",
+    "model": "articletag"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "articles",
+    "model": "author"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "articles",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "articles",
+    "model": "tag"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "store",
+    "model": "order"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "store",
+    "model": "product"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "store",
+    "model": "productcategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "subscriptions",
+    "model": "subscription"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "subscriptions",
+    "model": "subscriptionplan"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "accounts",
+    "model": "profile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "authtoken",
+    "model": "token"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "authtoken",
+    "model": "tokenproxy"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "articles",
+    "model": "comment"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "fx77vs32rzwwomqmau5lnf77m9imvh3q",
+  "fields": {
+    "session_data": "e30:1w28gn:_GFzUDUif1APY4LhSwCUZUnsEJGb8LfM5YRnwo_LJ6Q",
+    "expire_date": "2026-03-30T14:13:01.691Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "sjccae1mc5q22i6adino69qf387ao4iw",
+  "fields": {
+    "session_data": "e30:1w28kN:jUG3u7TdwKc3Gd9HYFItxgnclvNOCjsOqFlkrdQVX1A",
+    "expire_date": "2026-03-30T14:16:43.392Z"
+  }
+},
+{
+  "model": "articles.category",
+  "pk": 1,
+  "fields": {
+    "name": "Technology",
+    "description": "Tech and cybersecurity articles"
+  }
+},
+{
+  "model": "articles.category",
+  "pk": 2,
+  "fields": {
+    "name": "News",
+    "description": "Latest cybersecurity news"
+  }
+},
+{
+  "model": "articles.author",
+  "pk": 1,
+  "fields": {
+    "name": "Румен Радев",
+    "bio": "Cybersecurity expert",
+    "email": "",
+    "website": ""
+  }
+},
+{
+  "model": "articles.author",
+  "pk": 2,
+  "fields": {
+    "name": "Георги Гидионов",
+    "bio": "Security researcher",
+    "email": "",
+    "website": ""
+  }
+},
+{
+  "model": "articles.author",
+  "pk": 3,
+  "fields": {
+    "name": "John Doe",
+    "bio": "",
+    "email": "",
+    "website": ""
+  }
+},
+{
+  "model": "articles.author",
+  "pk": 4,
+  "fields": {
+    "name": "John Doe",
+    "bio": "Cybersecurity expert",
+    "email": "",
+    "website": ""
+  }
+},
+{
+  "model": "articles.author",
+  "pk": 5,
+  "fields": {
+    "name": "John Doe",
+    "bio": "Cybersecurity expert",
+    "email": "",
+    "website": ""
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 2,
+  "fields": {
+    "title": "Tech Над 30 приставки за Chrome, маскирани като ИИ функционалност, крадат вашите данни",
+    "slug": "new_chrome_virus",
+    "content": "Повече от 30 злонамерени разширения за Chrome, инсталирани от най-малко 260 000 потребители, се представят за полезни ИИ асистенти, но всъщност крадат API ключовете, имейл съобщенията и други лични данни на потребителите. Още по-лошо: много от тях все още са достъпни в Chrome Web Store към момента на написването на тази статия.",
+    "summary": "Някои от тези разширения се представят за конкретни чатботове, като ChatGPT, Gemini и Grok, докато други твърдят, че са по-общи ИИ помощни инструменти, които помагат на потребителите да обобщават документи, да пишат съобщения и да предоставят помощ за Gmail.\r\n\r\nВъпреки различните имена и ID на разширенията всички те използват една и съща основна кодова база и разрешения, а всички 32 разширения комуникират с инфраструктурата под домейна tapnetic[.]pro, според LayerX Security, която разкри к",
+    "category": 2,
+    "author": 1,
+    "created_at": "2026-03-10T08:07:35.288Z",
+    "updated_at": "2026-03-11T14:36:57.718Z",
+    "published_at": null,
+    "status": "published",
+    "views": 15,
+    "featured": true
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 3,
+  "fields": {
+    "title": "Нов закона за киберсигурност-Изменение и допълнение",
+    "slug": "law_cybersecurity",
+    "content": "Новият Закон за изменение и допълнение на Закона за киберсигурност (в сила от 2026 г.) прилага европейската директива\r\nМИС 2 (NIS2), разширявайки обхвата на задължените субекти в ключови сектори като енергетика, транспорт, здравеопазване, публична администрация и производство.",
+    "summary": "Новият Закон за изменение и допълнение на Закона за киберсигурност (в сила от 2026 г.) прилага европейската директиваОсновни акценти в новия закон:\r\nРазширен обхват: Включва повече средни и големи предприятия в нови сектори: космическо пространство, пощенски услуги, производство на медицински изделия, химикали и храни.Строги мерки: Изискват се модерни технологии за сигурност, резервно копие (backup) на данни и оценка на уязвимостите.",
+    "category": 2,
+    "author": 2,
+    "created_at": "2026-03-10T08:24:26.364Z",
+    "updated_at": "2026-03-11T14:36:52.016Z",
+    "published_at": null,
+    "status": "published",
+    "views": 22,
+    "featured": true
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 4,
+  "fields": {
+    "title": "Осъден оператор на ботнет, свързан с TA551. Напомняне, че ransomware атаките започват от достъпа",
+    "slug": "cyber_operator",
+    "content": "Осъден оператор на ботнет, свързан с TA551. Напомняне, че ransomware атаките започват от достъпа",
+    "summary": "Руски гражданин е осъден в САЩ за участие в управление на ботнет, използван за подпомагане на ransomware атаки срещу организации.\r\nСпоред Министерството на правосъдието на САЩ, 40-годишният Илия Ангелов е получил присъда от 2 години лишаване от свобода и глоба от 100 000 долара за ролята си в киберпрестъпна операция, свързана с групата TA551.\r\nСлучаят показва нещо ключово.\r\nRansomware атаките започват много преди криптирането. Те започват с достъп",
+    "category": 2,
+    "author": 2,
+    "created_at": "2026-03-30T07:08:54.261Z",
+    "updated_at": "2026-03-30T07:08:54.261Z",
+    "published_at": null,
+    "status": "published",
+    "views": 4,
+    "featured": true
+  }
+},
+{
+  "model": "articles.comment",
+  "pk": 1,
+  "fields": {
+    "article": 3,
+    "author_name": "Георги",
+    "author_email": "kipsta12@abv.bg",
+    "content": "всичко е точно",
+    "created_at": "2026-03-24T13:45:59.302Z",
+    "is_approved": true
+  }
+},
+{
+  "model": "articles.comment",
+  "pk": 2,
+  "fields": {
+    "article": 3,
+    "author_name": "Анонимен",
+    "author_email": null,
+    "content": "Много полезна статия",
+    "created_at": "2026-03-24T13:48:24.842Z",
+    "is_approved": true
+  }
+},
+{
+  "model": "articles.comment",
+  "pk": 3,
+  "fields": {
+    "article": 2,
+    "author_name": "Иван Петров",
+    "author_email": "ivan@gmail.com",
+    "content": "Много полезна и поучителна статия",
+    "created_at": "2026-03-24T13:50:30.232Z",
+    "is_approved": true
+  }
+},
+{
+  "model": "articles.comment",
+  "pk": 4,
+  "fields": {
+    "article": 4,
+    "author_name": "Валентин",
+    "author_email": "val@gmail.com",
+    "content": "Поздравления за поредната полезна и интересна статия",
+    "created_at": "2026-03-30T07:09:55.248Z",
+    "is_approved": true
+  }
+},
+{
+  "model": "articles.comment",
+  "pk": 5,
+  "fields": {
+    "article": 3,
+    "author_name": "Тошко",
+    "author_email": "todot@gmail.com",
+    "content": "Сега ще се отворят над 300 000 работни места за специалисти по киберсигурност в ЕС.",
+    "created_at": "2026-03-30T08:38:27.624Z",
+    "is_approved": true
+  }
+},
+{
+  "model": "store.productcategory",
+  "pk": 1,
+  "fields": {
+    "name": "Books",
+    "description": "Cybersecurity books"
+  }
+},
+{
+  "model": "store.productcategory",
+  "pk": 2,
+  "fields": {
+    "name": "Tools",
+    "description": "Security tools and software"
+  }
+},
+{
+  "model": "store.productcategory",
+  "pk": 3,
+  "fields": {
+    "name": "Courses",
+    "description": "Online training courses"
+  }
+},
+{
+  "model": "store.productcategory",
+  "pk": 4,
+  "fields": {
+    "name": "Books",
+    "description": ""
+  }
+},
+{
+  "model": "store.productcategory",
+  "pk": 5,
+  "fields": {
+    "name": "Books",
+    "description": "Security books"
+  }
+},
+{
+  "model": "store.productcategory",
+  "pk": 6,
+  "fields": {
+    "name": "Books",
+    "description": "Security books"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 1,
+  "fields": {
+    "name": "Raspberry Pi 5 16GB",
+    "slug": "Raspberry",
+    "description": "Raspberry Pi 5 работи с по-бърз ARM процесор (64-bit Quad Core 2,4 GHz) и с по-производителна графика (VideoCore VII GPU 800MHz), осигуряващи 2 до 3 пъти по-висока производителност в сравнение с Raspberry Pi 4. Размерите на платката са същите, като най-съществените изменения са: ново местоположение на PoE, USB, LAN, CSI и DSI портовете (CSI/DSI са с по-малки конектори); премахнат е TV/AUDIO конектора; добавени са PCIe 2.0 порт (изисква се HAT платка), FAN конектор, Power бутон, RTC, debug конектор и др.",
+    "price": "230.00",
+    "category": 2,
+    "stock": 5,
+    "available": true,
+    "created_at": "2026-03-10T08:18:35.784Z",
+    "updated_at": "2026-03-10T08:19:16.961Z",
+    "image": "products/raspberry-pi-5-16gb.webp"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 2,
+  "fields": {
+    "name": "WiFi Pineapple Mark",
+    "slug": "WiFi_Pineapple",
+    "description": "Устройство за тестване на проникване на WiFi мрежи в 2.4 GHz 802.11 b/g/n диапазони. Позволява атаки срещу WPA и WPA Enterprise мрежи. Може да се захранва чрез USB Type-C кабел и е съвместимо с множество операционни системи, включително Windows, Mac, Linux, Android, iOS. Hak5 WiFi Pineapple Mark VII Basic",
+    "price": "340.00",
+    "category": 2,
+    "stock": 10,
+    "available": true,
+    "created_at": "2026-03-10T08:29:08.168Z",
+    "updated_at": "2026-03-10T08:29:08.168Z",
+    "image": "products/Untitled.jpeg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 3,
+  "fields": {
+    "name": "(Refurb) - DELL Rugged - 5420 Cyber Rugged Laptop with Win + Dual Boot Kali & BlackArch",
+    "slug": "dell-5420-cyber-rugged-laptop",
+    "description": "Refurb DELL - Rugged Laptop with Cyber Hacking Tools for Education\r\nUnlock the potential of cybersecurity with our fully set up DELL rugged laptop, tailored for educational purposes. Ideal for students and professionals alike, this laptop is equipped with powerful cyber hacking tools to enhance your learning experience.",
+    "price": "899.00",
+    "category": 2,
+    "stock": 8,
+    "available": true,
+    "created_at": "2026-03-30T07:16:10.477Z",
+    "updated_at": "2026-03-30T07:16:10.477Z",
+    "image": "products/il_fullxfull.5717961580_fp9m.webp"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 4,
+  "fields": {
+    "name": "През очите на хакера (Второ преработено и допълнено издание)",
+    "slug": "prez-ochite-na-hakera",
+    "description": "Целта на книгата „През очите на хакера“ е да покаже различни начини за получаване на достъп до конфиденциални данни, а също и начини за тяхната защита. Ще научите как недоброжелателите биха могли да получат достъп до вашите данни, но и как може да се защитите.\r\nПървата част на книгата е посветена на електронната поща. Разгледани са не само начини за нейната защита, но и начини за разбиването ѝ. Да, трябва да погледнете „през очите на хакера“. Можете да се предпазите, само ако започнете да мислите като един истински хакер.",
+    "price": "15.00",
+    "category": 1,
+    "stock": 3,
+    "available": true,
+    "created_at": "2026-03-30T07:19:07.566Z",
+    "updated_at": "2026-03-30T07:19:07.566Z",
+    "image": "products/prez-ochite-na-hakera-vtoro-preraboteno-i-dopalneno-izdanie-30.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 5,
+  "fields": {
+    "name": "Cyber Security Book",
+    "slug": "cyber-book",
+    "description": "",
+    "price": "29.99",
+    "category": 4,
+    "stock": 0,
+    "available": true,
+    "created_at": "2026-03-31T11:03:06.922Z",
+    "updated_at": "2026-03-31T11:03:06.923Z",
+    "image": ""
+  }
+},
+{
+  "model": "store.product",
+  "pk": 6,
+  "fields": {
+    "name": "Cyber Security Guide",
+    "slug": "cyber-guide",
+    "description": "A comprehensive guide",
+    "price": "29.99",
+    "category": 5,
+    "stock": 10,
+    "available": true,
+    "created_at": "2026-03-31T11:07:04.523Z",
+    "updated_at": "2026-03-31T11:07:04.523Z",
+    "image": ""
+  }
+},
+{
+  "model": "store.product",
+  "pk": 7,
+  "fields": {
+    "name": "Cybersecurity Basics",
+    "slug": "cyber-basics",
+    "description": "Learn the fundamentals.",
+    "price": "19.99",
+    "category": 6,
+    "stock": 5,
+    "available": true,
+    "created_at": "2026-03-31T11:09:33.917Z",
+    "updated_at": "2026-03-31T11:09:33.917Z",
+    "image": ""
+  }
+},
+{
+  "model": "store.order",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "quantity": 1,
+    "customer_name": "gg",
+    "customer_email": "gfdf@abv.bg",
+    "customer_phone": "0879325320",
+    "ordered_at": "2026-03-11T06:56:11.816Z",
+    "is_completed": false
+  }
+},
+{
+  "model": "subscriptions.subscriptionplan",
+  "pk": 1,
+  "fields": {
+    "name": "Basic",
+    "slug": "",
+    "plan_type": "monthly",
+    "price": "10.00",
+    "duration_days": 30,
+    "description": "Basic plan",
+    "is_active": true
+  }
+},
+{
+  "model": "subscriptions.subscription",
+  "pk": 1,
+  "fields": {
+    "plan": 1,
+    "subscriber_name": "Георги",
+    "subscriber_email": "gidionov@abv.bg",
+    "start_date": "2026-12-03",
+    "end_date": null,
+    "is_active": true,
+    "created_at": "2026-02-19T14:52:51.491Z"
+  }
+},
+{
+  "model": "subscriptions.subscription",
+  "pk": 2,
+  "fields": {
+    "plan": 1,
+    "subscriber_name": "err",
+    "subscriber_email": "gidionov@abv.bg",
+    "start_date": "2026-10-03",
+    "end_date": null,
+    "is_active": true,
+    "created_at": "2026-03-10T07:07:50.417Z"
+  }
+},
+{
+  "model": "subscriptions.subscription",
+  "pk": 3,
+  "fields": {
+    "plan": 1,
+    "subscriber_name": "Georgi Gidionov",
+    "subscriber_email": "gidionov@abv.bg",
+    "start_date": "2026-10-03",
+    "end_date": null,
+    "is_active": true,
+    "created_at": "2026-03-10T09:34:39.296Z"
+  }
+},
+{
+  "model": "subscriptions.subscription",
+  "pk": 4,
+  "fields": {
+    "plan": 1,
+    "subscriber_name": "tyt",
+    "subscriber_email": "uu@abv.bg",
+    "start_date": "2026-10-04",
+    "end_date": null,
+    "is_active": true,
+    "created_at": "2026-03-10T09:40:36.265Z"
+  }
+},
+{
+  "model": "subscriptions.subscription",
+  "pk": 5,
+  "fields": {
+    "plan": 1,
+    "subscriber_name": "Georgi Gidionov",
+    "subscriber_email": "gidionov@abv.bg",
+    "start_date": "2026-10-03",
+    "end_date": null,
+    "is_active": true,
+    "created_at": "2026-03-10T09:41:34.442Z"
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 1,
+  "fields": {
+    "user": 3,
+    "bio": "",
+    "location": "",
+    "birth_date": null,
+    "avatar": ""
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "acd890c55709dd08b21d24d345ee288bbbd39c8d",
+  "fields": {
+    "user": 3,
+    "created": "2026-03-24T13:17:32.159Z"
+  }
+}
+]

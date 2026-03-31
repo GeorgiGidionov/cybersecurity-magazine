@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Редактиране на коментар{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Редактиране на коментар</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Запази</button>
+        <a href="{% url 'comment_list' %}" class="btn btn-secondary">Отказ</a>
+    </form>
+</div>
+{% endblock %}

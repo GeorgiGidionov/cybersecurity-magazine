@@ -1,5 +1,5 @@
 from django import forms
-from .models import Article
+from .models import Article, Comment
 
 class ArticleForm(forms.ModelForm):
     class Meta:
@@ -39,3 +39,21 @@ class ArticleForm(forms.ModelForm):
         if self.instance.pk and self.instance.status == 'published':
             self.fields['status'].disabled = True
             self.fields['status'].help_text = 'Cannot change status of a published article.'
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['author_name', 'author_email', 'content']
+        widgets = {
+            'content': forms.Textarea(attrs={'rows': 4, 'placeholder': 'Вашият коментар...'}),
+            'author_name': forms.TextInput(attrs={'placeholder': 'Вашето име'}),
+            'author_email': forms.EmailInput(attrs={'placeholder': 'Имейл (незадължителен)'}),
+        }
+        labels = {
+            'author_name': 'Име',
+            'author_email': 'Имейл',
+            'content': 'Коментар',
+        }
+        help_texts = {
+            'author_email': 'Няма да бъде публикуван.',
+        }
