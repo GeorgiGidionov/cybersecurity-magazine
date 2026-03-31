@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Изтриване на автор{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <div class="alert alert-danger">
+        <h4>Потвърждение</h4>
+        <p>Сигурни ли сте, че искате да изтриете автора <strong>"{{ object.name }}"</strong>?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Да, изтрий</button>
+            <a href="{% url 'author_list' %}" class="btn btn-secondary">Отказ</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

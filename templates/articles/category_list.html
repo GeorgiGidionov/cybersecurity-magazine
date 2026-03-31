@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Категории статии{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <div class="d-flex justify-content-between">
+        <h1>Категории статии</h1>
+        <a href="{% url 'category_create' %}" class="btn btn-success">Нова категория</a>
+    </div>
+    <table class="table table-striped mt-3">
+        <thead>
+            <tr><th>Име</th><th>Описание</th><th>Действия</th>
+        </thead>
+        <tbody>
+            {% for cat in categories %}
+            <tr>
+                <td>{{ cat.name }}</td>
+                <td>{{ cat.description }}</td>
+                <td>
+                    <a href="{% url 'category_edit' cat.pk %}" class="btn btn-sm btn-warning">Редактирай</a>
+                    <a href="{% url 'category_delete' cat.pk %}" class="btn btn-sm btn-danger">Изтрий</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="3">Няма категории. Създайте първата!</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,5 +1,6 @@
 from django import forms
-from .models import Product, Order
+from .models import Product, Order, ProductCategory
+
 
 class ProductForm(forms.ModelForm):
     class Meta:
@@ -54,3 +55,8 @@ class OrderForm(forms.ModelForm):
         if qty < 1:
             raise forms.ValidationError('Quantity must be at least 1.')
         return qty
+
+class ProductCategoryForm(forms.ModelForm):
+    class Meta:
+        model = ProductCategory
+        fields = ['name', 'description']

@@ -1,5 +1,6 @@
 from django import forms
-from .models import Article, Comment
+from .models import Article, Comment, Category, Author
+
 
 class ArticleForm(forms.ModelForm):
     class Meta:
@@ -57,3 +58,12 @@ class CommentForm(forms.ModelForm):
         help_texts = {
             'author_email': 'Няма да бъде публикуван.',
         }
+class CategoryForm(forms.ModelForm):
+    class Meta:
+        model = Category
+        fields = ['name', 'description']
+
+class AuthorForm(forms.ModelForm):
+    class Meta:
+        model = Author
+        fields = ['name', 'bio', 'email', 'website']

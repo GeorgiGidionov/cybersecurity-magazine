@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.db.models import Q
 from django.contrib import messages
-from .models import Article, Category, Comment
+from .models import Article, Category, Comment, Author
 from .forms import ArticleForm, CommentForm
 from .tasks import send_comment_notification
 
@@ -118,3 +118,52 @@ class CommentDeleteView(DeleteView):
         if not request.user.is_superuser:
             return redirect('home')
         return super().dispatch(request, *args, **kwargs)
+
+from django.contrib.auth.mixins import LoginRequiredMixin
+from .forms import CategoryForm, AuthorForm
+
+# Category
+class CategoryListView(LoginRequiredMixin, ListView):
+    model = Category
+    template_name = 'articles/category_list.html'
+    context_object_name = 'categories'
+
+class CategoryCreateView(LoginRequiredMixin, CreateView):
+    model = Category
+    form_class = CategoryForm
+    template_name = 'articles/category_form.html'
+    success_url = reverse_lazy('category_list')
+
+class CategoryUpdateView(LoginRequiredMixin, UpdateView):
+    model = Category
+    form_class = CategoryForm
+    template_name = 'articles/category_form.html'
+    success_url = reverse_lazy('category_list')
+
+class CategoryDeleteView(LoginRequiredMixin, DeleteView):
+    model = Category
+    template_name = 'articles/category_confirm_delete.html'
+    success_url = reverse_lazy('category_list')
+
+# Author
+class AuthorListView(LoginRequiredMixin, ListView):
+    model = Author
+    template_name = 'articles/author_list.html'
+    context_object_name = 'authors'
+
+class AuthorCreateView(LoginRequiredMixin, CreateView):
+    model = Author
+    form_class = AuthorForm
+    template_name = 'articles/author_form.html'
+    success_url = reverse_lazy('author_list')
+
+class AuthorUpdateView(LoginRequiredMixin, UpdateView):
+    model = Author
+    form_class = AuthorForm
+    template_name = 'articles/author_form.html'
+    success_url = reverse_lazy('author_list')
+
+class AuthorDeleteView(LoginRequiredMixin, DeleteView):
+    model = Author
+    template_name = 'articles/author_confirm_delete.html'
+    success_url = reverse_lazy('author_list')
