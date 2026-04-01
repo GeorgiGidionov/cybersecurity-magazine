@@ -17,6 +17,12 @@ class UserUpdateForm(forms.ModelForm):
         model = User
         fields = ['username', 'email']
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields['username'].disabled = True
+        self.fields['username'].help_text = 'Username cannot be changed.'
+
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
