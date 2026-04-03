@@ -15,13 +15,10 @@
 
     <div class="row">
         <div class="col-md-6">
-            <!-- Ако имате снимка, покажете я -->
             {% if product.image %}
-                <img src="{{ product.image.url }}" class="img-fluid rounded" alt="{{ product.name }}">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid rounded">
             {% else %}
-                <div class="bg-secondary text-white d-flex align-items-center justify-content-center rounded" style="height: 300px;">
-                    <span>Няма изображение</span>
-                </div>
+                <img src="{% static 'images/no-image.png' %}" alt="No image" class="img-fluid rounded">
             {% endif %}
         </div>
         <div class="col-md-6">

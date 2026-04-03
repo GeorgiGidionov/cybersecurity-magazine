@@ -6,19 +6,18 @@ from articles.models import Article, Category, Author
 from django.contrib.auth.models import User
 
 class ArticleAPITest(TestCase):
-    @classmethod
-    def setUpTestData(cls):
-        cls.client = APIClient()
-        cls.username = 'apiuser'
-        cls.user = User.objects.create_user(username=cls.username, password='pass')
-        cls.category = Category.objects.create(name='Tech')
-        cls.author = Author.objects.create(name='John')
-        cls.article = Article.objects.create(
+    def setUp(self):
+        self.client = APIClient()  # ← създаваме APIClient за всеки тест
+        self.username = 'apiuser'
+        self.user = User.objects.create_user(username=self.username, password='pass')
+        self.category = Category.objects.create(name='Tech')
+        self.author = Author.objects.create(name='John')
+        self.article = Article.objects.create(
             title='API Test',
             slug='api-test',
             content='Content',
-            category=cls.category,
-            author=cls.author,
+            category=self.category,
+            author=self.author,
             status='published'
         )
 
