@@ -1,9 +1,8 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Product, Order, ProductCategory
-from .forms import ProductForm, OrderForm, ProductCategoryForm
+from .models import Product, Order
+from .forms import ProductForm, OrderForm
 
 class ProductListView(ListView):
     model = Product
@@ -52,26 +51,3 @@ class OrderCreateView(CreateView):
 
 def order_success(request):
     return render(request, 'store/order_success.html')
-
-# Категории продукти
-class ProductCategoryListView(LoginRequiredMixin, ListView):
-    model = ProductCategory
-    template_name = 'store/productcategory_list.html'
-    context_object_name = 'categories'
-
-class ProductCategoryCreateView(LoginRequiredMixin, CreateView):
-    model = ProductCategory
-    form_class = ProductCategoryForm
-    template_name = 'store/productcategory_form.html'
-    success_url = reverse_lazy('productcategory_list')
-
-class ProductCategoryUpdateView(LoginRequiredMixin, UpdateView):
-    model = ProductCategory
-    form_class = ProductCategoryForm
-    template_name = 'store/productcategory_form.html'
-    success_url = reverse_lazy('productcategory_list')
-
-class ProductCategoryDeleteView(LoginRequiredMixin, DeleteView):
-    model = ProductCategory
-    template_name = 'store/productcategory_confirm_delete.html'
-    success_url = reverse_lazy('productcategory_list')

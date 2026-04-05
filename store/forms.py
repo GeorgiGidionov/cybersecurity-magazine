@@ -1,12 +1,10 @@
 from django import forms
-from .models import Product, Order, ProductCategory
-
+from .models import Product, Order
 
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
-        fields = '__all__'
-        exclude = ['created_at', 'updated_at']  # изключени полета
+        fields = ['name', 'slug', 'description', 'price', 'stock', 'available', 'image']  # category е премахнат
         widgets = {
             'description': forms.Textarea(attrs={'rows': 5, 'placeholder': 'Detailed product description...'}),
             'price': forms.NumberInput(attrs={'step': '0.01'}),
@@ -55,8 +53,3 @@ class OrderForm(forms.ModelForm):
         if qty < 1:
             raise forms.ValidationError('Quantity must be at least 1.')
         return qty
-
-class ProductCategoryForm(forms.ModelForm):
-    class Meta:
-        model = ProductCategory
-        fields = ['name', 'description']

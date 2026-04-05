@@ -37,8 +37,8 @@ class Article(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     content = models.TextField()
     summary = models.TextField(max_length=500, blank=True)
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, related_name='articles')
-    author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, related_name='articles')
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True, related_name='articles')
+    author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, blank=True, related_name='articles')
     tags = models.ManyToManyField(Tag, through='ArticleTag', blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -61,7 +61,7 @@ class ArticleTag(models.Model):
         unique_together = ('article', 'tag')
 
 class Comment(models.Model):
-    article = models.ForeignKey('Article', on_delete=models.CASCADE, related_name='comments')
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='comments')
     author_name = models.CharField(max_length=100)
     author_email = models.EmailField(blank=True, null=True)
     content = models.TextField()
@@ -70,4 +70,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment by {self.author_name} on {self.article.title}"
-
