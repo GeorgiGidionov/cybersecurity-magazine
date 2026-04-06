@@ -92,3 +92,6 @@ POST	/api/comments/	Add a comment (authenticated)
 POST	/api-token-auth/	Obtain authentication token (username+password)
 
 Deployment on Azure
+
+The project is deployed on Azure. You can access it at:  
+http://cyberssecuritymagazine-gug6g4djbcfce5fh.switzerlandnorth-01.azurewebsites.net/
